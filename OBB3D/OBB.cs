@@ -5,15 +5,15 @@ public class OBB : MonoBehaviour
     public Vector3 size;
     public Color gizmosColor = Color.white;
 
-    Vector3 P0 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, -size.x * 0.5f, -size.x * 0.5f)); } }
-    Vector3 P1 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, -size.x * 0.5f, -size.x * 0.5f)); } }
-    Vector3 P2 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, size.x * 0.5f, -size.x * 0.5f)); } }
-    Vector3 P3 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, size.x * 0.5f, -size.x * 0.5f)); } }
+    Vector3 P0 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, -size.y * 0.5f, -size.z * 0.5f)); } }
+    Vector3 P1 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, -size.y * 0.5f, -size.z * 0.5f)); } }
+    Vector3 P2 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, size.y * 0.5f, -size.z * 0.5f)); } }
+    Vector3 P3 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, size.y * 0.5f, -size.z * 0.5f)); } }
 
-    Vector3 P4 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, -size.x * 0.5f, size.x * 0.5f)); } }
-    Vector3 P5 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, -size.x * 0.5f, size.x * 0.5f)); } }
-    Vector3 P6 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, size.x * 0.5f, size.x * 0.5f)); } }
-    Vector3 P7 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, size.x * 0.5f, size.x * 0.5f)); } }
+    Vector3 P4 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, -size.y * 0.5f, size.z * 0.5f)); } }
+    Vector3 P5 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, -size.y * 0.5f, size.z * 0.5f)); } }
+    Vector3 P6 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(size.x * 0.5f, size.y * 0.5f, size.z * 0.5f)); } }
+    Vector3 P7 { get { return transform.localToWorldMatrix.MultiplyPoint3x4(new Vector3(-size.x * 0.5f, size.y * 0.5f, size.z * 0.5f)); } }
 
     Vector3 XAxis { get { return transform.right; } }
     Vector3 YAxis { get { return transform.up; } }
